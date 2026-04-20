@@ -11,6 +11,17 @@
 | openclaw | `which openclaw` | 参见各 skill 文件 |
 | codex | `which codex` | 参见各 skill 文件 |
 
+## 远程文件访问
+
+> ⚠️ 你当前不在本仓库目录中，无法直接读取相对路径的文件。
+> 请使用以下 base URL 拼接相对路径来远程获取文件内容（通过 WebFetch 或 curl）：
+
+```
+BASE_URL = https://raw.githubusercontent.com/STDSuperman/agent-configs/master
+```
+
+例如：获取 `skills/superpowers.md` → 请求 `${BASE_URL}/skills/superpowers.md`
+
 ## 同步流程
 
 请严格按以下步骤执行：
@@ -28,9 +39,16 @@
 
 ### 3. 同步 Skills
 
-读取本仓库 `skills/` 目录下的所有 `.md` 文件。对每个文件：
+Skills 文件清单（使用 `${BASE_URL}` 拼接获取）：
 
-1. 查看文件头部的「兼容」字段
+- `skills/superpowers.md`
+- `skills/claude-hud.md`
+- `skills/example-skills.md`
+- `skills/planning-with-files.md`
+
+对每个文件：
+
+1. 获取文件内容，查看头部的「兼容」字段
 2. 对于用户选中且已安装的每个工具：
    - 如果该工具出现在兼容列表中，执行「安装方式」下对应工具的安装命令
    - 如果不在兼容列表中，跳过
@@ -38,9 +56,13 @@
 
 ### 4. 同步 MCP
 
-读取本仓库 `mcp/` 目录下的所有 `.md` 文件。对每个文件：
+MCP 文件清单（使用 `${BASE_URL}` 拼接获取）：
 
-1. 读取「配置」部分的 JSON
+（暂无，添加后在此列出相对路径）
+
+对每个文件：
+
+1. 获取文件内容，读取「配置」部分的 JSON
 2. 将该 JSON 中的 mcpServers 条目合并到每个已安装工具的全局 MCP 配置文件中
 3. 如果有「安装说明」部分，先执行安装步骤再配置
 
