@@ -8,5 +8,6 @@
 ### Claude Code
 
 ```
-/install-plugin example-skills@anthropic-agent-skills
+claude plugin marketplace add anthropics/skills
+claude plugin install example-skills@anthropic-agent-skills
 ```

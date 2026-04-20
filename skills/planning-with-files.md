@@ -8,5 +8,6 @@
 ### Claude Code
 
 ```
-/install-plugin planning-with-files@planning-with-files
+claude plugin marketplace add OthmanAdi/planning-with-files
+claude plugin install planning-with-files@planning-with-files
 ```

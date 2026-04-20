@@ -8,5 +8,6 @@
 ### Claude Code
 
 ```
-/install-plugin claude-hud@claude-hud
+claude plugin marketplace add jarrodwatts/claude-hud
+claude plugin install claude-hud@claude-hud
 ```

@@ -8,7 +8,8 @@
 ### Claude Code
 
 ```
-/install-plugin superpowers@superpowers-marketplace
+claude plugin marketplace add obra/superpowers-marketplace
+claude plugin install superpowers@superpowers-marketplace
 ```
 
 ### opencode

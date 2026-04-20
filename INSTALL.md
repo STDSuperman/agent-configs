@@ -6,7 +6,7 @@
 
 | 工具 | 检测命令 | 插件安装机制 |
 |------|---------|-------------|
-| Claude Code | `which claude` | `/install-plugin <name>@<marketplace>` |
+| Claude Code | `which claude` | `claude plugin marketplace add <owner/repo>` + `claude plugin install <name>@<marketplace>` |
 | opencode | `which opencode` | Fetch 远程 INSTALL.md |
 | openclaw | `which openclaw` | 参见各 skill 文件 |
 | codex | `which codex` | 参见各 skill 文件 |
