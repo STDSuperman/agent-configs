@@ -58,7 +58,9 @@ Skills 文件清单（使用 `${BASE_URL}` 拼接获取）：
 
 MCP 文件清单（使用 `${BASE_URL}` 拼接获取）：
 
-（暂无，添加后在此列出相对路径）
+- `mcp/deepwiki.md`
+- `mcp/context7.md`
+- `mcp/playwright.md`
 
 对每个文件：
 
