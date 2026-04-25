@@ -1,6 +1,6 @@
 # AI Tools Sync
 
-把本文件的 raw 链接丢给你的 AI 编码工具，即可开始同步 skills/plugins 和 MCP server 配置。
+把本文件的 raw 链接丢给你的 AI 编码工具，即可开始同步 plugins 和 MCP server 配置。
 
 ## 支持的工具
 
@@ -20,7 +20,7 @@
 BASE_URL = https://raw.githubusercontent.com/STDSuperman/agent-configs/master
 ```
 
-例如：获取 `skills/superpowers.md` → 请求 `${BASE_URL}/skills/superpowers.md`
+例如：获取 `plugins/superpowers.md` → 请求 `${BASE_URL}/plugins/superpowers.md`
 
 ## 同步流程
 
@@ -30,7 +30,7 @@ BASE_URL = https://raw.githubusercontent.com/STDSuperman/agent-configs/master
 
 **所有配置默认安装到全局维度，而非项目维度。**
 
-- Skills: 安装到全局插件目录
+- Plugins: 通过 marketplace 安装到全局
 - MCP: 根据工具类型使用 CLI 命令或 JSON 合并（见步骤4）
 - 如需项目级配置，用户需手动调整
 
@@ -45,18 +45,20 @@ BASE_URL = https://raw.githubusercontent.com/STDSuperman/agent-configs/master
 - 如果命令返回零退出码（找到了可执行文件），标记为「已安装」
 - 如果命令返回非零退出码，标记为「未安装」，后续跳过该工具
 
-### 3. 同步 Skills
+### 3. 同步 Plugins
 
-Skills 文件清单（使用 `${BASE_URL}` 拼接获取）：
+Plugins 文件清单（使用 `${BASE_URL}` 拼接获取）：
 
-- `skills/superpowers.md`
-- `skills/claude-hud.md`
-- `skills/example-skills.md`
-- `skills/planning-with-files.md`
+- `plugins/superpowers.md`
+- `plugins/code-simplifier.md`
+- `plugins/frontend-design.md`
+- `plugins/claude-hud.md`
+- `plugins/example-skills.md`
+- `plugins/planning-with-files.md`
 
 对每个文件：
 
-1. 获取文件内容，查看「兼容」字段
+1. 获取文件内容
 2. 对已安装的工具，执行「安装方式」下对应的安装命令
 3. 记录结果
 
@@ -82,7 +84,7 @@ MCP 文件清单（使用 `${BASE_URL}` 拼接获取）：
 ## 同步结果
 
 ### ✅ 已同步
-- **Claude Code**: superpowers, planning-with-files, claude-hud, example-skills
+- **Claude Code**: superpowers, code-simplifier, frontend-design, claude-hud, example-skills, planning-with-files (plugins)
 - **opencode**: superpowers
 
 ### ⚠️ 未安装（已跳过）
