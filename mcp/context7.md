@@ -2,17 +2,25 @@
 
 编程库和框架的最新文档查询服务。
 
-## 配置
+## 安装方式
+
+### Claude Code
+
+```bash
+claude mcp add --transport http context7 https://mcp.context7.com/mcp --header "CONTEXT7_API_KEY: your-api-key-here"
+```
+
+### opencode / codex
+
+将以下 JSON 合并到配置文件的 `mcpServers` 字段：
 
 ```json
 {
-  "mcpServers": {
-    "context7": {
-      "type": "http",
-      "url": "https://mcp.context7.com/mcp",
-      "headers": {
-        "CONTEXT7_API_KEY": "your-api-key-here"
-      }
+  "context7": {
+    "type": "http",
+    "url": "https://mcp.context7.com/mcp",
+    "headers": {
+      "CONTEXT7_API_KEY": "your-api-key-here"
     }
   }
 }
